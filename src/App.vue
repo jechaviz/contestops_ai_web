@@ -52,8 +52,14 @@
       />
 
       <AutomationPanel
-        v-else
+        v-else-if="activeTab === 'automation'"
         :items="data.automations"
+      />
+
+      <BattlePanel
+        v-else
+        :scorecard="data.scorecard"
+        :competitors="data.competitors"
       />
     </section>
   </main>
@@ -66,6 +72,7 @@ import RunLedger from '/src/components/RunLedger.vue';
 import ChecklistPanel from '/src/components/ChecklistPanel.vue';
 import EvidenceLedger from '/src/components/EvidenceLedger.vue';
 import AutomationPanel from '/src/components/AutomationPanel.vue';
+import BattlePanel from '/src/components/BattlePanel.vue';
 
 export default {
   components: {
@@ -75,6 +82,7 @@ export default {
     ChecklistPanel,
     EvidenceLedger,
     AutomationPanel,
+    BattlePanel,
   },
   data() {
     return {
@@ -85,6 +93,7 @@ export default {
         { id: 'checklist', label: 'Rules', icon: 'list-checks' },
         { id: 'evidence', label: 'Evidence', icon: 'folder-check' },
         { id: 'automation', label: 'Automation', icon: 'bot' },
+        { id: 'battle', label: 'Battle', icon: 'swords' },
       ],
       flash: false,
     };

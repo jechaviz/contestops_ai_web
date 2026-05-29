@@ -1,7 +1,7 @@
 window.contestOpsData = {
   product: 'ContestOps AI',
-  version: '0.2.0',
-  prod: 67,
+  version: '0.4.0',
+  prod: 81,
   milestone: {
     title: 'Foundation package',
     percent: 62,
@@ -11,8 +11,8 @@ window.contestOpsData = {
   opportunity: 'Build with Gemini XPRIZE',
   category: 'Entrepreneurship & Job Creation',
   metrics: [
-    { label: 'Rules', value: '15/32', tone: 'teal' },
-    { label: 'Evidence', value: '10/26', tone: 'amber' },
+    { label: 'Rules', value: '18/32', tone: 'teal' },
+    { label: 'Evidence', value: '14/26', tone: 'amber' },
     { label: 'Users', value: 'TBD', tone: 'slate' },
     { label: 'Revenue', value: 'TBD', tone: 'red' },
   ],
@@ -21,6 +21,7 @@ window.contestOpsData = {
     { time: '2026-05-29', name: 'V manifest', status: 'done' },
     { time: '2026-05-29', name: 'Gemini smoke', status: 'mock' },
     { time: '2026-05-29', name: 'Cloud Run API', status: 'done' },
+    { time: '2026-05-29', name: 'Judge scorecard', status: 'done' },
   ],
   checklist: [
     { title: 'Gemini API deployed LLM call', status: 'active', owner: 'core' },
@@ -42,5 +43,33 @@ window.contestOpsData = {
     { name: 'Devpost draft prepare', type: 'WAIBAv', state: 'validating' },
     { name: 'Form field map', type: 'YAML', state: 'ready' },
     { name: 'Final submit receipt', type: 'WAIBAv', state: 'scheduled' },
+  ],
+  scorecard: [
+    { label: 'Business Viability', score: 58, gap: 'Close 3 independent paid pilots.' },
+    { label: 'AI-Native Operations', score: 86, gap: 'Run real Gemini and Cloud receipts.' },
+    { label: 'Category Impact', score: 82, gap: 'Quantify founder outcomes.' },
+    { label: 'Differentiation', score: 88, gap: 'Publish one redacted case study.' },
+  ],
+  competitors: [
+    {
+      name: 'Vertical AI startup with revenue',
+      threat: 92,
+      counter: 'Show AI operating the whole business with receipts.',
+    },
+    {
+      name: 'Generic agent platform',
+      threat: 84,
+      counter: 'Win with a focused founder-ops wedge and paid pilots.',
+    },
+    {
+      name: 'Proposal-writing assistant',
+      threat: 78,
+      counter: 'Show execution, evidence, and form automation beyond drafting.',
+    },
+    {
+      name: 'AI devtool startup',
+      threat: 76,
+      counter: 'Show economic opportunity for nontechnical founders.',
+    },
   ],
 };

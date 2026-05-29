@@ -13,6 +13,8 @@ test('ContestOps AI console renders', async ({ page }) => {
   await page.waitForTimeout(2000);
   try {
     await expect(page.getByText('ContestOps AI').first()).toBeVisible({ timeout: 20000 });
+    await page.getByRole('tab', { name: 'Battle' }).click();
+    await expect(page.getByText('Vertical AI startup with revenue')).toBeVisible();
   } catch (error) {
     console.log(JSON.stringify(browserEvents, null, 2));
     console.log((await page.content()).slice(0, 1600));
