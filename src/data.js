@@ -37,6 +37,7 @@ window.contestOpsData = {
     { name: 'Devpost payload', state: 'active', path: 'submission/devpost_payload.json' },
     { name: 'WAIBAv trace', state: 'active', path: 'automation/output' },
     { name: 'Gemini receipt', state: 'active', path: 'evidence/gemini_call_receipts' },
+    { name: 'Founder proof', state: 'active', path: 'evidence/public/FOUNDER_PROOF.generated.md' },
     { name: 'Revenue ledger', state: 'planned', path: 'evidence/private/revenue' },
     { name: 'User ledger', state: 'planned', path: 'evidence/private/users' },
   ],
@@ -44,6 +45,7 @@ window.contestOpsData = {
     { name: 'Devpost draft prepare', type: 'WAIBAv', state: 'validating' },
     { name: 'Form field map', type: 'YAML', state: 'ready' },
     { name: 'Final submit receipt', type: 'WAIBAv', state: 'scheduled' },
+    { name: 'Profile evidence check', type: 'WAIBAv', state: 'ready' },
   ],
   scorecard: [
     { label: 'Business Viability', score: 62, gap: 'Close paid pilots and record receipts.' },
