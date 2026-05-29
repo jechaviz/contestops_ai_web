@@ -1,0 +1,46 @@
+window.contestOpsData = {
+  product: 'ContestOps AI',
+  version: '0.1.0',
+  prod: 38,
+  milestone: {
+    title: 'Foundation package',
+    percent: 62,
+    target: '2026-05-29',
+  },
+  deadline: '2026-08-17 1:00 PM PDT',
+  opportunity: 'Build with Gemini XPRIZE',
+  category: 'Entrepreneurship & Job Creation',
+  metrics: [
+    { label: 'Rules', value: '9/32', tone: 'teal' },
+    { label: 'Evidence', value: '5/26', tone: 'amber' },
+    { label: 'Users', value: 'TBD', tone: 'slate' },
+    { label: 'Revenue', value: 'TBD', tone: 'red' },
+  ],
+  runs: [
+    { time: '2026-05-29', name: 'Rules package', status: 'done' },
+    { time: '2026-05-29', name: 'V manifest', status: 'done' },
+    { time: '2026-05-29', name: 'Gemini smoke', status: 'mock' },
+    { time: '2026-06-04', name: 'Cloud Run staging', status: 'next' },
+  ],
+  checklist: [
+    { title: 'Gemini API deployed LLM call', status: 'active', owner: 'core' },
+    { title: 'Google Cloud product receipt', status: 'planned', owner: 'deploy' },
+    { title: 'Public or judge-shared repo', status: 'planned', owner: 'release' },
+    { title: 'Revenue monthly breakdown', status: 'planned', owner: 'sales' },
+    { title: 'Real user feedback and consent', status: 'planned', owner: 'pilot' },
+    { title: 'Sub-3-minute demo video', status: 'planned', owner: 'media' },
+  ],
+  evidence: [
+    { name: 'V manifest', state: 'active', path: 'contestops_ai/out' },
+    { name: 'Devpost payload', state: 'active', path: 'submission/devpost_payload.json' },
+    { name: 'WAIBAv trace', state: 'active', path: 'automation/output' },
+    { name: 'Gemini receipt', state: 'active', path: 'evidence/gemini_call_receipts' },
+    { name: 'Revenue ledger', state: 'planned', path: 'evidence/private/revenue' },
+    { name: 'User ledger', state: 'planned', path: 'evidence/private/users' },
+  ],
+  automations: [
+    { name: 'Devpost draft prepare', type: 'WAIBAv', state: 'validating' },
+    { name: 'Form field map', type: 'YAML', state: 'ready' },
+    { name: 'Final submit receipt', type: 'WAIBAv', state: 'scheduled' },
+  ],
+};
