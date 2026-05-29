@@ -56,6 +56,11 @@
         :items="data.automations"
       />
 
+      <ProofSprintPanel
+        v-else-if="activeTab === 'proof'"
+        :sprint="data.proofSprint"
+      />
+
       <BattlePanel
         v-else
         :scorecard="data.scorecard"
@@ -72,6 +77,7 @@ import RunLedger from '/src/components/RunLedger.vue';
 import ChecklistPanel from '/src/components/ChecklistPanel.vue';
 import EvidenceLedger from '/src/components/EvidenceLedger.vue';
 import AutomationPanel from '/src/components/AutomationPanel.vue';
+import ProofSprintPanel from '/src/components/ProofSprintPanel.vue';
 import BattlePanel from '/src/components/BattlePanel.vue';
 
 export default {
@@ -82,6 +88,7 @@ export default {
     ChecklistPanel,
     EvidenceLedger,
     AutomationPanel,
+    ProofSprintPanel,
     BattlePanel,
   },
   data() {
@@ -93,6 +100,7 @@ export default {
         { id: 'checklist', label: 'Rules', icon: 'list-checks' },
         { id: 'evidence', label: 'Evidence', icon: 'folder-check' },
         { id: 'automation', label: 'Automation', icon: 'bot' },
+        { id: 'proof', label: 'Proof', icon: 'target' },
         { id: 'battle', label: 'Battle', icon: 'swords' },
       ],
       flash: false,

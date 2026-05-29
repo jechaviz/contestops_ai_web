@@ -53,6 +53,7 @@ export default {
         { id: 'checklist', label: 'Rules', icon: 'list-checks' },
         { id: 'evidence', label: 'Evidence', icon: 'folder-check' },
         { id: 'automation', label: 'Automation', icon: 'bot' },
+        { id: 'proof', label: 'Proof', icon: 'target' },
         { id: 'battle', label: 'Battle', icon: 'swords' },
       ],
     };

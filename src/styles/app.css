@@ -256,6 +256,10 @@ h2 {
   color: var(--amber);
 }
 
+.metric-card.blue strong {
+  color: var(--blue);
+}
+
 .metric-card.red strong {
   color: var(--red);
 }
@@ -279,7 +283,8 @@ h2 {
 }
 
 .view-grid,
-.battle-grid {
+.battle-grid,
+.proof-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
   gap: 16px;
@@ -329,13 +334,19 @@ h2 {
 }
 
 .score-list,
-.competitor-list {
+.competitor-list,
+.proof-metrics,
+.proof-steps,
+.win-list {
   display: grid;
   gap: 12px;
 }
 
 .score-row,
-.competitor-row {
+.competitor-row,
+.proof-metric,
+.proof-step,
+.win-item {
   display: grid;
   gap: 10px;
   align-items: center;
@@ -363,6 +374,57 @@ h2 {
 
 .competitor-row {
   grid-template-columns: 54px minmax(0, 1fr);
+}
+
+.proof-panel .panel-header span,
+.proof-objective,
+.proof-metric span,
+.proof-step p {
+  color: var(--muted);
+}
+
+.proof-objective {
+  margin: 0 0 14px;
+}
+
+.proof-metric {
+  grid-template-columns: minmax(170px, 0.9fr) minmax(140px, 1.1fr);
+}
+
+.proof-step {
+  grid-template-columns: 76px minmax(0, 1fr);
+}
+
+.proof-step > span {
+  display: grid;
+  width: 64px;
+  min-height: 34px;
+  place-items: center;
+  border-radius: 8px;
+  background: #e7f5f4;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.proof-step p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.wide-proof {
+  grid-column: 1 / -1;
+}
+
+.win-list {
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+}
+
+.win-item {
+  grid-template-columns: 24px minmax(0, 1fr);
+  min-height: 58px;
+  padding: 10px;
+  border: 1px solid #edf1f4;
+  border-radius: 8px;
 }
 
 .threat {
@@ -491,6 +553,8 @@ svg {
   .metric-strip,
   .view-grid,
   .battle-grid,
+  .proof-grid,
+  .win-list,
   .evidence-grid {
     grid-template-columns: 1fr;
   }
@@ -513,7 +577,10 @@ svg {
   .automation-row,
   .run-row,
   .score-row,
-  .competitor-row {
+  .competitor-row,
+  .proof-metric,
+  .proof-step,
+  .win-item {
     grid-template-columns: 1fr;
     align-items: start;
     padding: 10px 0;

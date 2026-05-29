@@ -1,20 +1,20 @@
 window.contestOpsData = {
   product: 'ContestOps AI',
-  version: '0.4.0',
-  prod: 81,
+  version: '0.5.0',
+  prod: 86,
   milestone: {
-    title: 'Foundation package',
-    percent: 62,
+    title: 'Proof sprint package',
+    percent: 72,
     target: '2026-05-29',
   },
   deadline: '2026-08-17 1:00 PM PDT',
   opportunity: 'Build with Gemini XPRIZE',
   category: 'Entrepreneurship & Job Creation',
   metrics: [
-    { label: 'Rules', value: '18/32', tone: 'teal' },
-    { label: 'Evidence', value: '14/26', tone: 'amber' },
-    { label: 'Users', value: 'TBD', tone: 'slate' },
-    { label: 'Revenue', value: 'TBD', tone: 'red' },
+    { label: 'Rules', value: '24/32', tone: 'teal' },
+    { label: 'Evidence', value: '19/26', tone: 'amber' },
+    { label: 'Users', value: '0/3', tone: 'blue' },
+    { label: 'Revenue', value: '0/3', tone: 'red' },
   ],
   runs: [
     { time: '2026-05-29', name: 'Rules package', status: 'done' },
@@ -22,6 +22,7 @@ window.contestOpsData = {
     { time: '2026-05-29', name: 'Gemini smoke', status: 'mock' },
     { time: '2026-05-29', name: 'Cloud Run API', status: 'done' },
     { time: '2026-05-29', name: 'Judge scorecard', status: 'done' },
+    { time: '2026-05-29', name: 'Proof sprint package', status: 'done' },
   ],
   checklist: [
     { title: 'Gemini API deployed LLM call', status: 'active', owner: 'core' },
@@ -45,10 +46,10 @@ window.contestOpsData = {
     { name: 'Final submit receipt', type: 'WAIBAv', state: 'scheduled' },
   ],
   scorecard: [
-    { label: 'Business Viability', score: 58, gap: 'Close 3 independent paid pilots.' },
-    { label: 'AI-Native Operations', score: 86, gap: 'Run real Gemini and Cloud receipts.' },
-    { label: 'Category Impact', score: 82, gap: 'Quantify founder outcomes.' },
-    { label: 'Differentiation', score: 88, gap: 'Publish one redacted case study.' },
+    { label: 'Business Viability', score: 62, gap: 'Close paid pilots and record receipts.' },
+    { label: 'AI-Native Operations', score: 88, gap: 'Run real Gemini and Cloud receipts.' },
+    { label: 'Category Impact', score: 84, gap: 'Quantify founder outcomes.' },
+    { label: 'Differentiation', score: 90, gap: 'Publish one redacted case study.' },
   ],
   competitors: [
     {
@@ -72,4 +73,30 @@ window.contestOpsData = {
       counter: 'Show economic opportunity for nontechnical founders.',
     },
   ],
+  proofSprint: {
+    window: '2026-06-01 to 2026-06-15',
+    objective: 'Convert the package into buyer, user, Cloud Run, Gemini, and Devpost receipts.',
+    metrics: [
+      { label: 'Outreach targets', current: 0, target: 20, status: 'ready' },
+      { label: 'Discovery calls', current: 0, target: 5, status: 'ready' },
+      { label: 'Paid pilots or invoices', current: 0, target: 3, status: 'must_win' },
+      { label: 'Env Gemini receipts', current: 0, target: 3, status: 'planned' },
+      { label: 'Cloud Run receipts', current: 0, target: 1, status: 'planned' },
+      { label: 'Devpost dry-runs', current: 1, target: 2, status: 'active' },
+    ],
+    steps: [
+      { day: 'D1', owner: 'growth', title: '20 targeted prospects', status: 'ready' },
+      { day: 'D2-D4', owner: 'product', title: '5 discovery calls', status: 'ready' },
+      { day: 'D5-D8', owner: 'ops', title: '3 paid pilot packets', status: 'must_win' },
+      { day: 'D9-D10', owner: 'engineering', title: 'Cloud Run + Gemini receipts', status: 'planned' },
+      { day: 'D11-D12', owner: 'submission', title: 'Public case study + judge guide', status: 'planned' },
+      { day: 'D13-D14', owner: 'automation', title: 'Devpost draft trace', status: 'scheduled' },
+    ],
+    winConditions: [
+      '3 independent paid pilots or signed invoices',
+      '3 user feedback records with consent status',
+      'Cloud Run URL and env-backed Gemini receipts',
+      'Devpost draft filled by automation with final-submit gate',
+    ],
+  },
 };
