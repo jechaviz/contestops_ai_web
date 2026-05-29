@@ -1,7 +1,7 @@
 window.contestOpsData = {
   product: 'ContestOps AI',
-  version: '0.1.0',
-  prod: 38,
+  version: '0.2.0',
+  prod: 67,
   milestone: {
     title: 'Foundation package',
     percent: 62,
@@ -11,8 +11,8 @@ window.contestOpsData = {
   opportunity: 'Build with Gemini XPRIZE',
   category: 'Entrepreneurship & Job Creation',
   metrics: [
-    { label: 'Rules', value: '9/32', tone: 'teal' },
-    { label: 'Evidence', value: '5/26', tone: 'amber' },
+    { label: 'Rules', value: '15/32', tone: 'teal' },
+    { label: 'Evidence', value: '10/26', tone: 'amber' },
     { label: 'Users', value: 'TBD', tone: 'slate' },
     { label: 'Revenue', value: 'TBD', tone: 'red' },
   ],
@@ -20,7 +20,7 @@ window.contestOpsData = {
     { time: '2026-05-29', name: 'Rules package', status: 'done' },
     { time: '2026-05-29', name: 'V manifest', status: 'done' },
     { time: '2026-05-29', name: 'Gemini smoke', status: 'mock' },
-    { time: '2026-06-04', name: 'Cloud Run staging', status: 'next' },
+    { time: '2026-05-29', name: 'Cloud Run API', status: 'done' },
   ],
   checklist: [
     { title: 'Gemini API deployed LLM call', status: 'active', owner: 'core' },
