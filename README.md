@@ -14,4 +14,10 @@ Open:
 http://127.0.0.1:4177/
 ```
 
+Public demo:
+
+```text
+https://jechaviz.github.io/contestops_ai_web/
+```
+
 The first screen is the product workspace, not a landing page.
