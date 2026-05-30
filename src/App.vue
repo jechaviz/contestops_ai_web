@@ -38,7 +38,7 @@
 
       <section v-if="activeTab === 'runs'" class="view-grid">
         <RunLedger :runs="runs" />
-        <img class="workflow-image" src="/assets/workflow-preview.png" alt="ContestOps workflow evidence preview" />
+        <img class="workflow-image" :src="workflowImage" alt="ContestOps workflow evidence preview" />
       </section>
 
       <ChecklistPanel
@@ -71,14 +71,14 @@
 </template>
 
 <script>
-import StatusRail from '/src/components/StatusRail.vue';
-import MetricStrip from '/src/components/MetricStrip.vue';
-import RunLedger from '/src/components/RunLedger.vue';
-import ChecklistPanel from '/src/components/ChecklistPanel.vue';
-import EvidenceLedger from '/src/components/EvidenceLedger.vue';
-import AutomationPanel from '/src/components/AutomationPanel.vue';
-import ProofSprintPanel from '/src/components/ProofSprintPanel.vue';
-import BattlePanel from '/src/components/BattlePanel.vue';
+import StatusRail from './components/StatusRail.vue';
+import MetricStrip from './components/MetricStrip.vue';
+import RunLedger from './components/RunLedger.vue';
+import ChecklistPanel from './components/ChecklistPanel.vue';
+import EvidenceLedger from './components/EvidenceLedger.vue';
+import AutomationPanel from './components/AutomationPanel.vue';
+import ProofSprintPanel from './components/ProofSprintPanel.vue';
+import BattlePanel from './components/BattlePanel.vue';
 
 export default {
   components: {
@@ -94,6 +94,7 @@ export default {
   data() {
     return {
       data: window.contestOpsData,
+      workflowImage: './assets/workflow-preview.png',
       activeTab: 'runs',
       tabs: [
         { id: 'runs', label: 'Runs', icon: 'activity' },
